@@ -1,0 +1,5 @@
+RewriteEngine on
+ErrorDocument 404 /404.php
+RewriteRule ^contacts$ contacts.php [NC, L]
+RewriteRule ^about$ about.php [NC, L]
+RewriteRule ^product_details/([0-9a-zA-Z-_]+)/([0-9]+)$  product_details?sef=$1&product_id=$2 [L, QSA]

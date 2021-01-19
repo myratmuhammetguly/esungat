@@ -1,0 +1,12 @@
+#Options -Indexes
+Options +FollowSymLinks -MultiViews
+# Turn mod_rewrite on
+RewriteEngine On
+RewriteBase /
+
+
+RewriteRule ^bizbarada$ about.php [L]
+RewriteRule ^bizinsalgymyz$ contacts.php [NC,L]
+RewriteRule ^harytlar/([0-9a-zA-Z-_]+)/([0-9]+)$  product_details.php?sef=$1&product_id=$2 [NC,L]
+RewriteRule ^sitemap$ sitemap.php [L]
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
